@@ -640,7 +640,7 @@ __rcu_dereference_sk_user_data_with_flags(const struct sock *sk,
 })
 #define rcu_assign_sk_user_data(sk, ptr)				\
 	__rcu_assign_sk_user_data_with_flags(sk, ptr, 0)
-
+//获取 sock 结构体所属的 net 命名空间（net_namespace），即获取 socket 绑定的网络命名空间。
 static inline
 struct net *sock_net(const struct sock *sk)
 {
